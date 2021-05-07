@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- gsap cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <title>textAnim</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <a href="#" class="activate">click me to activate effect</a>
+    <div class="show">
+      <h1>
+        <span class="hidetext">i wish</span>
+      </h1>
+      <h1>
+        <span class="hidetext">for you</span>
+      </h1>
+      <h1>
+        <span class="hidetext">to have</span>
+      </h1>
+      <h1>
+        <span class="hidetext">an amazing day :)</span>
+      </h1>
+    </div>
+
+    <script>
+      const t1 = gsap.timeline();
+      const link = document.querySelector("a");
+      const show = document.querySelector(".show");
+
+      link.addEventListener("click", function () {
+        link.style.display = "none";
+        show.style.display = "block";
+
+        t1.from(".hidetext", 0.8, {
+          top: "200px",
+          stagger: 0.3,
+        });
+      });
+    </script>
+  </body>
+</html>

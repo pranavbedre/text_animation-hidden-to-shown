@@ -1,0 +1,54 @@
+body {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+}
+
+.show {
+  display: none;
+  z-index: 200;
+}
+
+h1 {
+  position: relative;
+  overflow: hidden;
+  height: 13rem;
+  font-size: 10em;
+  margin: 0;
+  z-index: 1;
+}
+
+.hidetext {
+  position: absolute;
+}
+
+span::-moz-selection {
+  background: white;
+  color: black;
+}
+
+span::selection {
+  background: white;
+  color: black;
+}
+
+body {
+  background: black;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
